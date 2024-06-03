@@ -16,7 +16,7 @@ func main() {
     
     AC := C - A
 	BC := C - B
-	Yigindisi := AC + BC
+	Yigindisi := AC * BC
 
     
     fmt.Printf("AC kesmaning uzunligi: %.2f\n",  AC)
