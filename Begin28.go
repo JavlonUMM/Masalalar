@@ -1,7 +1,8 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
+	"math"
 )
 
 func main() {
@@ -9,10 +10,10 @@ func main() {
     fmt.Print("A ni kiriting: ")
     fmt.Scan(&A)
     
-    A2 := A * A
+    A2 := math.Pow(A, 2)
     A3 := A2 * A
     A5 := A3 * A2
-    A10 := A5 * A5
+    A10 := math.Pow(A5, 2)
     A15 := A10 * A5
     
     fmt.Printf("A ning kvadrati (A^2): %.2f\n", A2)

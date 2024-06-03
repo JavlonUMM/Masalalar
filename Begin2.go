@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-    var a int
+    var a float64
     fmt.Print("Kvadratning tomoni kiriting: ")
     fmt.Scan(&a)
     
-    S := a * a
+    S := math.Pow(a,10)
     fmt.Printf("Kvadratning yuzasi: %d\n", S)
 }

@@ -1,27 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-    var A, B, C float64
+	var A, B, C float64
+	fmt.Print("A nuqtani kiriting: ")
+	fmt.Scan(&A)
+	fmt.Print("B nuqtani koordinatasini kiriting: ")
+	fmt.Scan(&B)
+	fmt.Print("C nuqtani koordinatasini kiriting: ")
+	fmt.Scan(&C)
 
-	fmt.Println("A, B va C nuqtalarini kiriting (A < C < B):")
-    
-    fmt.Print("Birinchi nuqtani kiriting (A): ")
-    fmt.Scan(&A)
-    
-    fmt.Print("Ikkinchi nuqtani kiriting (B): ")
-    fmt.Scan(&B)
+	AC := math.Abs(C - A)
+	BC := math.Abs(C - B)
+	kopaytmasi := AC * BC
 
-	fmt.Print("Uchinchi nuqtani kiriting (C): ")
-    fmt.Scan(&C)
-    
-    AC := C - A
-	BC := B - C
-	Kopaytmasi := AC + BC
-
-    
-    fmt.Printf("AC kesmaning uzunligi: %.2f\n",  AC)
-	fmt.Printf("BC kesmaning uzunligi: %.2f\n",  BC)
-	fmt.Printf("Kesmaning yigindisi: %.2f\n",  Kopaytmasi)
+	fmt.Printf("AC kesma uzunligi = %.2f\n", AC)
+	fmt.Printf("BC kesma uzunligi = %.2f\n", BC)
+	fmt.Printf("AC va BC kesmalar uzunligi ko'paytmasi = %.2f\n", kopaytmasi)
 }

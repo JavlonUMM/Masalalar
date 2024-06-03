@@ -1,23 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-    var R1, R2 float64
-    
-    fmt.Print("Birinchi aylananing radiusini kiriting (R1): ")
-    fmt.Scan(&R1)
-    
-    fmt.Print("R1 dan katta ikkinchi aylananing radiusini kiriting (R2): ")
-    fmt.Scan(&R2)
+	var R1, R2 float64
+	fmt.Print("R1 radiusini kiriting: ")
+	fmt.Scan(&R1)
+	fmt.Print("R2 radiusini kiriting: ")
+	fmt.Scan(&R2)
 
-	const pi = 3.14
-	
-    S1 := pi * R1
-    S2 := pi * R2
-    S3 := pi * (R1 - R2)
-    
-    fmt.Printf("Birinchi aylananing yuzasi (S1): %.2f\n", S1)
-    fmt.Printf("Ikkinchi aylananing yuzasi (S2): %.2f\n", S2)
-    fmt.Printf("Aylanalar orasidagi yuzalar farqi (S3): %.2f\n", S3)
+	S1 := math.Pi * math.Pow(R1, 2)
+	S2 := math.Pi * math.Pow(R2, 2)
+
+	S3 := math.Pi * (R1 - R2) * (R1 + R2)
+
+	fmt.Printf("S1 = %.2f\n", S1)
+	fmt.Printf("S2 = %.2f\n", S2)
+	fmt.Printf("S3 = %.2f\n", S3)
 }

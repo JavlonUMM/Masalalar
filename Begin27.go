@@ -1,15 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
     var A float64
     fmt.Print("A ni kiriting: ")
     fmt.Scan(&A)
     
-    A2 := A * A
-    A4 := A2 * A2
-    A8 := A4 * A4
+    A2 := math.Pow(A, 2)
+    A4 := math.Pow(A2, 2)
+    A8 := math.Pow(A4, 2)
     
     fmt.Printf("A ning kvadrati (A^2): %.2f\n", A2)
     fmt.Printf("A ning to'rtinchi darajasi (A^4): %.2f\n", A4)
