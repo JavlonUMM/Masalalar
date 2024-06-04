@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
     var sekund int
-    fmt.Print("Sekundlarni kiriting: ")
+    fmt.Print("Sekundni kiriting: ")
     fmt.Scan(&sekund)
     
     soat := sekund / 3600
