@@ -8,8 +8,8 @@ func main() {
     fmt.Print("Enter the second: ")
     fmt.Scan(&second)
 
-    minutes := second / 60
-    seconds := second % 60
+    hour := second / 3600
+    result := second % 3600
 
-    fmt.Printf("Result: %d %d\n", minutes, seconds)
+    fmt.Printf("Result: %d soat %d sekund\n", hour, result)
 }

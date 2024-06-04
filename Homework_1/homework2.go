@@ -7,7 +7,7 @@ func main() {
     fmt.Print("Enter a number greater than 999: ")
     fmt.Scan(&number)
     
-    result := (number / 1000) % 10
+    result := (number / 100) % 10
     
     fmt.Printf("Result: %d\n", result)
 }
